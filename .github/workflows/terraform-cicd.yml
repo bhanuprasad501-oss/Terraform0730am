@@ -90,6 +90,10 @@ jobs:
     env:
       WORKSPACE_NAME: development
 
+    defaults:
+      run:
+        working-directory: ./terraform-github-actions-OIDC  
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
