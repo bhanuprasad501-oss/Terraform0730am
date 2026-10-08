@@ -28,7 +28,7 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::700308877625:role/bhanu-oidc
+          role-to-assume: arn:aws:iam::127854692984:role/vaishu-oidc
           aws-region: us-east-1
 
       - name: Setup Terraform
@@ -78,7 +78,7 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::700308877625:role/bhanu-oidc
+          role-to-assume: arn:aws:iam::127854692984:role/vaishu-oidc
           aws-region: us-east-1
 
       - name: Setup Terraform
