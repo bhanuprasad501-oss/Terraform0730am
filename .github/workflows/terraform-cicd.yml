@@ -16,10 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: development
 
-    defaults:
-      run:
-        working-directory: ./terraform
-
+    
     env:
       WORKSPACE_NAME: development
 
@@ -70,9 +67,6 @@ jobs:
     needs: plan
     environment: development
 
-    defaults:
-      run:
-        working-directory: ./terraform
 
     env:
       WORKSPACE_NAME: development
