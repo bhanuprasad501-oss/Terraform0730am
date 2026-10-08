@@ -59,15 +59,23 @@ jobs:
           -input=false \
           -out=tfplan
 
-      - name: Check Plan File
+      - name: Check Terraform Plan
         run: |
-          ls -lh tfplan
+          echo "Current directory:"
+                pwd
+
+          echo "Files:"
+            ls -la
+
+          echo "Searching for tfplan:"
+          find . -name "tfplan" -type f -print
 
       - name: Upload Terraform Plan
         uses: actions/upload-artifact@v4
         with:
           name: tfplan
-          path: tfplan
+          path: |
+            **/tfplan
           if-no-files-found: error
           retention-days: 1
 
